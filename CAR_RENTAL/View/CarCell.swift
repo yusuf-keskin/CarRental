@@ -21,7 +21,7 @@ class CarCell: UITableViewCell {
     
     let carNameLbl:UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Avenir", size: 16)
+        label.font = UIFont(name: "Avenir", size: 12)
         label.textColor =  .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Hey"

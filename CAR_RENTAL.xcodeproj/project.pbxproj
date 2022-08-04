@@ -17,6 +17,7 @@
 		325A183B2896786200A80F03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A183A2896786200A80F03 /* ViewController.swift */; };
 		325A18402896786400A80F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325A183F2896786400A80F03 /* Assets.xcassets */; };
 		325A18432896786400A80F03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325A18412896786400A80F03 /* LaunchScreen.storyboard */; };
+		326E8FEC289C68F100C9C2F5 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E8FEB289C68F100C9C2F5 /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		325A183F2896786400A80F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		325A18422896786400A80F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		325A18442896786400A80F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		326E8FEB289C68F100C9C2F5 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				321E55CF2899916C00A489CD /* Constants.swift */,
+				326E8FEB289C68F100C9C2F5 /* UIImageViewExtension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				325A183B2896786200A80F03 /* ViewController.swift in Sources */,
 				325A18372896786200A80F03 /* AppDelegate.swift in Sources */,
 				321E55D42899985D00A489CD /* Observable.swift in Sources */,
+				326E8FEC289C68F100C9C2F5 /* UIImageViewExtension.swift in Sources */,
 				321E55D72899B0E800A489CD /* RentalViewModel.swift in Sources */,
 				321E55D02899916C00A489CD /* Constants.swift in Sources */,
 				321E55DD2899B59300A489CD /* DataService.swift in Sources */,

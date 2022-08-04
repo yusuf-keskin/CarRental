@@ -8,14 +8,12 @@
 import Foundation
 
 class DataService {
-    
-    var searchWord = Observable<String>("trailer")
+
     static let instance = DataService()
     
-    func getDataFromServer (completion : @escaping (_ dict: Dictionary<String,Any> )->()) {
+    func getDataFromServer (searchWord : String, completion : @escaping (_ dict: Dictionary<String,Any> )->()) {
         
-        
-        let url = URL(string: SEARCH_URL + searchWord.value + REST_OF_URL)
+        let url = URL(string: SEARCH_URL + searchWord + REST_OF_URL)
         let session = URLSession.shared
         session.dataTask(with: url!) { data, response, error in
             if error != nil {
@@ -31,7 +29,8 @@ class DataService {
     }
     
     
-    func parseJson (dict : Dictionary<String,Any>, completion : @escaping (_ carModels : [CarModel])->()) {
+    func parseJson (dict : Dictionary<String,Any>, completion : @escaping (_ carModels : [CarModel]) -> ()) {
+        var completedArray = [CarModel]()
         var modelArray = [CarModel]()
         var urlModelArray = [UrlModel]()
         
@@ -54,25 +53,23 @@ class DataService {
 
         for i in included {
             var urlModel = UrlModel()
-            let attributes2 = i["attributes"] as? Dictionary<String,Any>
-            let url = attributes2!["url"] as? String
+            let attributes2 = i["attributes"] as! Dictionary<String,Any>
+            let url = attributes2["url"] as! String
             let id2 = i["id"] as! String
             urlModel = UrlModel(id: id2, url: url)
             urlModelArray.append(urlModel)
         }
         
-        print(urlModelArray)
-
-        
         for i in urlModelArray {
             for var j in modelArray {
                 if i.id == j.id {
                     j.imageUrl = i.url
-                    print(modelArray)
+                    completedArray.append(j)
                 }
             }
         }
-        completion(modelArray)
+       
+        completion(completedArray)
     }
-
+   
 }
