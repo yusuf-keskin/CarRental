@@ -7,20 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321E55D02899916C00A489CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55CF2899916C00A489CD /* Constants.swift */; };
+		321E55D2289994A700A489CD /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55D1289994A700A489CD /* CarCell.swift */; };
+		321E55D42899985D00A489CD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55D32899985D00A489CD /* Observable.swift */; };
+		321E55D72899B0E800A489CD /* RentalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55D62899B0E800A489CD /* RentalViewModel.swift */; };
+		321E55DA2899B3DA00A489CD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55D92899B3DA00A489CD /* DataModel.swift */; };
+		321E55DD2899B59300A489CD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55DC2899B59300A489CD /* DataService.swift */; };
 		325A18372896786200A80F03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A18362896786200A80F03 /* AppDelegate.swift */; };
-		325A18392896786200A80F03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A18382896786200A80F03 /* SceneDelegate.swift */; };
 		325A183B2896786200A80F03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A183A2896786200A80F03 /* ViewController.swift */; };
-		325A183E2896786200A80F03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325A183C2896786200A80F03 /* Main.storyboard */; };
 		325A18402896786400A80F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325A183F2896786400A80F03 /* Assets.xcassets */; };
 		325A18432896786400A80F03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325A18412896786400A80F03 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		321E55CF2899916C00A489CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		321E55D1289994A700A489CD /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
+		321E55D32899985D00A489CD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		321E55D62899B0E800A489CD /* RentalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalViewModel.swift; sourceTree = "<group>"; };
+		321E55D92899B3DA00A489CD /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		321E55DC2899B59300A489CD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		325A18332896786200A80F03 /* CAR_RENTAL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAR_RENTAL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		325A18362896786200A80F03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		325A18382896786200A80F03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		325A183A2896786200A80F03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		325A183D2896786200A80F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		325A183F2896786400A80F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		325A18422896786400A80F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		325A18442896786400A80F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +45,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		321E55CE2899915800A489CD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				321E55CF2899916C00A489CD /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		321E55D52899B0C800A489CD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				321E55D62899B0E800A489CD /* RentalViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		321E55D82899B3B500A489CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				321E55D92899B3DA00A489CD /* DataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		321E55DB2899B57E00A489CD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				321E55DC2899B59300A489CD /* DataService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		325A182A2896786200A80F03 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +96,27 @@
 		325A18352896786200A80F03 /* CAR_RENTAL */ = {
 			isa = PBXGroup;
 			children = (
+				321E55DB2899B57E00A489CD /* Service */,
+				321E55D82899B3B500A489CD /* Model */,
+				321E55CE2899915800A489CD /* Utilities */,
+				321E55D52899B0C800A489CD /* ViewModel */,
+				325A184A2896871500A80F03 /* View */,
 				325A18362896786200A80F03 /* AppDelegate.swift */,
-				325A18382896786200A80F03 /* SceneDelegate.swift */,
-				325A183A2896786200A80F03 /* ViewController.swift */,
-				325A183C2896786200A80F03 /* Main.storyboard */,
 				325A183F2896786400A80F03 /* Assets.xcassets */,
 				325A18412896786400A80F03 /* LaunchScreen.storyboard */,
 				325A18442896786400A80F03 /* Info.plist */,
+				321E55D32899985D00A489CD /* Observable.swift */,
 			);
 			path = CAR_RENTAL;
+			sourceTree = "<group>";
+		};
+		325A184A2896871500A80F03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				321E55D1289994A700A489CD /* CarCell.swift */,
+				325A183A2896786200A80F03 /* ViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +179,6 @@
 			files = (
 				325A18432896786400A80F03 /* LaunchScreen.storyboard in Resources */,
 				325A18402896786400A80F03 /* Assets.xcassets in Resources */,
-				325A183E2896786200A80F03 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +189,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				321E55DA2899B3DA00A489CD /* DataModel.swift in Sources */,
+				321E55D2289994A700A489CD /* CarCell.swift in Sources */,
 				325A183B2896786200A80F03 /* ViewController.swift in Sources */,
 				325A18372896786200A80F03 /* AppDelegate.swift in Sources */,
-				325A18392896786200A80F03 /* SceneDelegate.swift in Sources */,
+				321E55D42899985D00A489CD /* Observable.swift in Sources */,
+				321E55D72899B0E800A489CD /* RentalViewModel.swift in Sources */,
+				321E55D02899916C00A489CD /* Constants.swift in Sources */,
+				321E55DD2899B59300A489CD /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		325A183C2896786200A80F03 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				325A183D2896786200A80F03 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		325A18412896786400A80F03 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +340,6 @@
 				INFOPLIST_FILE = CAR_RENTAL/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +367,6 @@
 				INFOPLIST_FILE = CAR_RENTAL/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
