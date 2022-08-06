@@ -20,18 +20,5 @@ class RentalViewModel {
             }
         }
     }
-    
-    
-//    func updateSearch (completion: @escaping (_ success : Bool) -> [CarModel] ) -> <#Return Type#>  {
-//        var carArray = [CarModel]()
-//        DataService.instance.getDataFromServer(searchWord: searchWord.value) { dict in
-//                DataService.instance.parseJson(dict: dict) { [self] carModels in
-//                    carArray = carModels
-//
-//            }
-//        }
-//        return carArray
-//    }
-//}
 
 }

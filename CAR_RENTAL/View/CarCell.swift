@@ -16,11 +16,10 @@ class CarCell: UITableViewCell {
         img.translatesAutoresizingMaskIntoConstraints = false
         img.layer.cornerRadius = 10
         img.clipsToBounds = true
-        img.backgroundColor = .brown
         return img      }()
     
-    let carNameLbl:UILabel = {
-        let label = UILabel()
+    let carNameLbl:UITextView = {
+        let label = UITextView()
         label.font = UIFont(name: "Avenir", size: 12)
         label.textColor =  .black
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -38,7 +37,7 @@ class CarCell: UITableViewCell {
 
      required init?(coder aDecoder: NSCoder) {
        super.init(coder: aDecoder)
-    }
+     }
 
     
     override func layoutSubviews() {
@@ -51,7 +50,7 @@ class CarCell: UITableViewCell {
         
         carNameLbl.frame = CGRect(x: 170,
                                   y: 10,
-                                  width: contentView.frame.size.width - 165,
+                                  width: contentView.frame.size.width - 190,
                                   height: 90)
     }
     
