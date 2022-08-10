@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate, UISearchResultsUpdating {
 
     var rentalModel = RentalViewModel()
-    var modelData = [CarModel]()
+    var modelData = Observable<[CarModel]>([CarModel]())
     
     let searchController : UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
@@ -28,11 +28,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        rentalModel.model.bind { _ in
+        modelData.bind { [self] _ in
             DispatchQueue.main.async { [self] in
                 tableView.reloadData()
-                print("model called")
+                print("tableVievReloaded")
+            }
+        }
+        
+        rentalModel.searchWord.bind { [self] _ in
+            print("searchword bind")
+            rentalModel.updateSearch { carModels in
+                self.modelData.value = carModels
             }
         }
         
@@ -62,26 +68,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else {return}
         rentalModel.searchWord.value = text
-        rentalModel.searchWord.bind { _ in
-            print("searchword bind")
-            self.rentalModel.updateSearch { [self] success in
-                self.modelData = rentalModel.model.value
-                print(modelData)
-            }
-        }
+
     }
 }
 
 
 extension ViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        modelData.count
+        modelData.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CarCell.identifier, for: indexPath) as? CarCell else {return UITableViewCell() }
-        if modelData.count != 0 {
-            let index = modelData[indexPath.row]
+        if modelData.value.count != 0 {
+            let index = modelData.value[indexPath.row]
             cell.carNameLbl.text = index.name
             cell.carImage.setCustomImage(index.imageUrl)
         }
