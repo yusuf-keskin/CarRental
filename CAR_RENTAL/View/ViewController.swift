@@ -67,7 +67,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else {return}
-        rentalModel.searchWord.value = text
+        if text != "" {
+            rentalModel.searchWord.value = text
+        }
 
     }
 }

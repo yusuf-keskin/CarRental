@@ -13,6 +13,8 @@
 		321E55D72899B0E800A489CD /* RentalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55D62899B0E800A489CD /* RentalViewModel.swift */; };
 		321E55DA2899B3DA00A489CD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55D92899B3DA00A489CD /* DataModel.swift */; };
 		321E55DD2899B59300A489CD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55DC2899B59300A489CD /* DataService.swift */; };
+		3247F49028A7CD9000F3B03A /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3247F48E28A7CD9000F3B03A /* DataParser.swift */; };
+		3247F49128A7CD9000F3B03A /* UrlRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3247F48F28A7CD9000F3B03A /* UrlRequestMaker.swift */; };
 		325A18372896786200A80F03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A18362896786200A80F03 /* AppDelegate.swift */; };
 		325A183B2896786200A80F03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A183A2896786200A80F03 /* ViewController.swift */; };
 		325A18402896786400A80F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325A183F2896786400A80F03 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 		321E55D62899B0E800A489CD /* RentalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalViewModel.swift; sourceTree = "<group>"; };
 		321E55D92899B3DA00A489CD /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		321E55DC2899B59300A489CD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		3247F48E28A7CD9000F3B03A /* DataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		3247F48F28A7CD9000F3B03A /* UrlRequestMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestMaker.swift; sourceTree = "<group>"; };
 		325A18332896786200A80F03 /* CAR_RENTAL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAR_RENTAL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		325A18362896786200A80F03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		325A183A2896786200A80F03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,15 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		3247F48D28A7CD9000F3B03A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3247F48E28A7CD9000F3B03A /* DataParser.swift */,
+				3247F48F28A7CD9000F3B03A /* UrlRequestMaker.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		325A182A2896786200A80F03 = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +112,9 @@
 		325A18352896786200A80F03 /* CAR_RENTAL */ = {
 			isa = PBXGroup;
 			children = (
-				321E55CE2899915800A489CD /* Utilities */,
 				321E55DB2899B57E00A489CD /* Service */,
+				3247F48D28A7CD9000F3B03A /* Helpers */,
+				321E55CE2899915800A489CD /* Utilities */,
 				321E55D82899B3B500A489CD /* Model */,
 				325A184A2896871500A80F03 /* View */,
 				321E55D52899B0C800A489CD /* ViewModel */,
@@ -192,8 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3247F49128A7CD9000F3B03A /* UrlRequestMaker.swift in Sources */,
 				321E55DA2899B3DA00A489CD /* DataModel.swift in Sources */,
 				321E55D2289994A700A489CD /* CarCell.swift in Sources */,
+				3247F49028A7CD9000F3B03A /* DataParser.swift in Sources */,
 				325A183B2896786200A80F03 /* ViewController.swift in Sources */,
 				325A18372896786200A80F03 /* AppDelegate.swift in Sources */,
 				321E55D42899985D00A489CD /* Observable.swift in Sources */,

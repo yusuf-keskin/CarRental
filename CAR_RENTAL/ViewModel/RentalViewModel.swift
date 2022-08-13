@@ -11,11 +11,9 @@ class RentalViewModel {
     
     var searchWord = Observable<String>("trailer")
     
-    func updateSearch (completion: @escaping (_ carModels : [CarModel])-> ())  {
-            DataService.instance.getDataFromServer(searchWord: searchWord.value) { dict in
-                    DataService.instance.parseJson(dict: dict) { carModels in
-                         completion(carModels)
-                }
-            }
+    func updateSearch (completion : @escaping(_ model : [CarModel])->()){
+        DataService.instance.getDataFromServer(searchWord: searchWord.value) { carModels in
+            completion(carModels)
         }
+    }
 }
