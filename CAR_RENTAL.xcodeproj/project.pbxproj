@@ -13,31 +13,41 @@
 		321E55D72899B0E800A489CD /* RentalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55D62899B0E800A489CD /* RentalViewModel.swift */; };
 		321E55DA2899B3DA00A489CD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55D92899B3DA00A489CD /* DataModel.swift */; };
 		321E55DD2899B59300A489CD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55DC2899B59300A489CD /* DataService.swift */; };
+		3222F22B28AABC710094DF1B /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222F22A28AABC710094DF1B /* FirebaseAuthService.swift */; };
 		3247F49028A7CD9000F3B03A /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3247F48E28A7CD9000F3B03A /* DataParser.swift */; };
 		3247F49128A7CD9000F3B03A /* UrlRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3247F48F28A7CD9000F3B03A /* UrlRequestMaker.swift */; };
 		325A18372896786200A80F03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A18362896786200A80F03 /* AppDelegate.swift */; };
-		325A183B2896786200A80F03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A183A2896786200A80F03 /* ViewController.swift */; };
+		325A183B2896786200A80F03 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A183A2896786200A80F03 /* MainVC.swift */; };
 		325A18402896786400A80F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325A183F2896786400A80F03 /* Assets.xcassets */; };
 		325A18432896786400A80F03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325A18412896786400A80F03 /* LaunchScreen.storyboard */; };
 		326E8FEC289C68F100C9C2F5 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E8FEB289C68F100C9C2F5 /* UIImageViewExtension.swift */; };
+		3281C6A128A9605E009EB473 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281C6A028A9605E009EB473 /* LoginVC.swift */; };
+		3281C6A328A9608A009EB473 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281C6A228A9608A009EB473 /* SignUpVC.swift */; };
+		4DAEF3360CFEA51AB0989DDE /* Pods_CAR_RENTAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B78A9786E2070E609BB6DDF4 /* Pods_CAR_RENTAL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		239E0265D1B5AB0F6A20E3DB /* Pods-CAR_RENTAL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CAR_RENTAL.release.xcconfig"; path = "Target Support Files/Pods-CAR_RENTAL/Pods-CAR_RENTAL.release.xcconfig"; sourceTree = "<group>"; };
 		321E55CF2899916C00A489CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		321E55D1289994A700A489CD /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		321E55D32899985D00A489CD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		321E55D62899B0E800A489CD /* RentalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalViewModel.swift; sourceTree = "<group>"; };
 		321E55D92899B3DA00A489CD /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		321E55DC2899B59300A489CD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		3222F22A28AABC710094DF1B /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		3247F48E28A7CD9000F3B03A /* DataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 		3247F48F28A7CD9000F3B03A /* UrlRequestMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestMaker.swift; sourceTree = "<group>"; };
 		325A18332896786200A80F03 /* CAR_RENTAL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAR_RENTAL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		325A18362896786200A80F03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		325A183A2896786200A80F03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		325A183A2896786200A80F03 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		325A183F2896786400A80F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		325A18422896786400A80F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		325A18442896786400A80F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		326E8FEB289C68F100C9C2F5 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		3281C6A028A9605E009EB473 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		3281C6A228A9608A009EB473 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		B78A9786E2070E609BB6DDF4 /* Pods_CAR_RENTAL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CAR_RENTAL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9A27D5990ACA7272AA7A670 /* Pods-CAR_RENTAL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CAR_RENTAL.debug.xcconfig"; path = "Target Support Files/Pods-CAR_RENTAL/Pods-CAR_RENTAL.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DAEF3360CFEA51AB0989DDE /* Pods_CAR_RENTAL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				321E55DC2899B59300A489CD /* DataService.swift */,
+				3222F22A28AABC710094DF1B /* FirebaseAuthService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -98,6 +110,8 @@
 			children = (
 				325A18352896786200A80F03 /* CAR_RENTAL */,
 				325A18342896786200A80F03 /* Products */,
+				7E7A7A6D0EF47C85DCDEA471 /* Pods */,
+				90E77B7D80BC2EDBBCD1DA8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,9 +145,28 @@
 			isa = PBXGroup;
 			children = (
 				321E55D1289994A700A489CD /* CarCell.swift */,
-				325A183A2896786200A80F03 /* ViewController.swift */,
+				325A183A2896786200A80F03 /* MainVC.swift */,
+				3281C6A028A9605E009EB473 /* LoginVC.swift */,
+				3281C6A228A9608A009EB473 /* SignUpVC.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7E7A7A6D0EF47C85DCDEA471 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9A27D5990ACA7272AA7A670 /* Pods-CAR_RENTAL.debug.xcconfig */,
+				239E0265D1B5AB0F6A20E3DB /* Pods-CAR_RENTAL.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		90E77B7D80BC2EDBBCD1DA8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B78A9786E2070E609BB6DDF4 /* Pods_CAR_RENTAL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 325A18472896786400A80F03 /* Build configuration list for PBXNativeTarget "CAR_RENTAL" */;
 			buildPhases = (
+				A1F9A390AA6694D1CD40C66E /* [CP] Check Pods Manifest.lock */,
 				325A182F2896786200A80F03 /* Sources */,
 				325A18302896786200A80F03 /* Frameworks */,
 				325A18312896786200A80F03 /* Resources */,
+				AD5AEBF48ECB87E08983FA4E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,6 +236,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A1F9A390AA6694D1CD40C66E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CAR_RENTAL-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD5AEBF48ECB87E08983FA4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CAR_RENTAL/Pods-CAR_RENTAL-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CAR_RENTAL/Pods-CAR_RENTAL-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CAR_RENTAL/Pods-CAR_RENTAL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		325A182F2896786200A80F03 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -208,13 +285,16 @@
 			files = (
 				3247F49128A7CD9000F3B03A /* UrlRequestMaker.swift in Sources */,
 				321E55DA2899B3DA00A489CD /* DataModel.swift in Sources */,
+				3281C6A128A9605E009EB473 /* LoginVC.swift in Sources */,
 				321E55D2289994A700A489CD /* CarCell.swift in Sources */,
 				3247F49028A7CD9000F3B03A /* DataParser.swift in Sources */,
-				325A183B2896786200A80F03 /* ViewController.swift in Sources */,
+				325A183B2896786200A80F03 /* MainVC.swift in Sources */,
+				3222F22B28AABC710094DF1B /* FirebaseAuthService.swift in Sources */,
 				325A18372896786200A80F03 /* AppDelegate.swift in Sources */,
 				321E55D42899985D00A489CD /* Observable.swift in Sources */,
 				326E8FEC289C68F100C9C2F5 /* UIImageViewExtension.swift in Sources */,
 				321E55D72899B0E800A489CD /* RentalViewModel.swift in Sources */,
+				3281C6A328A9608A009EB473 /* SignUpVC.swift in Sources */,
 				321E55D02899916C00A489CD /* Constants.swift in Sources */,
 				321E55DD2899B59300A489CD /* DataService.swift in Sources */,
 			);
@@ -350,6 +430,7 @@
 		};
 		325A18482896786400A80F03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9A27D5990ACA7272AA7A670 /* Pods-CAR_RENTAL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -377,6 +458,7 @@
 		};
 		325A18492896786400A80F03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 239E0265D1B5AB0F6A20E3DB /* Pods-CAR_RENTAL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

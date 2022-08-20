@@ -9,3 +9,8 @@ import Foundation
 
 var SEARCH_URL = "https://search.outdoorsy.co/rentals?filter[keywords]="
 var REST_OF_URL = "&page[limit]=10&page[offset]=10"
+
+//Firestore Main
+let USER = "user"
+
+

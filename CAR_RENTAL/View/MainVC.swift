@@ -7,10 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate, UISearchResultsUpdating {
-
+class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate, UISearchResultsUpdating {
+    
+    static let identifier = "mainVC"
     var rentalModel = RentalViewModel()
     var modelData = Observable<[CarModel]>([CarModel]())
+    
     
     let searchController : UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
@@ -41,7 +43,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.modelData.value = carModels
             }
         }
-        
+
         setUpNavigation()
         
         navigationItem.searchController = searchController
@@ -52,17 +54,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
- 
         
+        let LogOutBtn = UIBarButtonItem()
+        LogOutBtn.title = "Log Out"
+        LogOutBtn.style = .plain
+        LogOutBtn.target = self
+        LogOutBtn.action = #selector(logOut(sender:))
+        self.navigationItem.setRightBarButton(LogOutBtn, animated: true)
+         
         view.addSubview(tableView)
         tableView.rowHeight = 100
         tableView.translatesAutoresizingMaskIntoConstraints = false
     }
    
     func setUpNavigation() {
-     navigationItem.title = "Keyword Search"
+        navigationItem.title = AuthService.insance.storedUserName
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), .font : UIFont(name: "Avenir", size: 18)!]
+        
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -72,10 +81,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
 
     }
+    
+    @objc func logOut(sender: UIBarButtonItem) {
+        print("Hey")
+        AuthService.insance.logoutUser { [self] status in
+            goToLogin()
+        }
+    }
+    
+    func goToLogin() {
+        let loginVC = LoginVC()
+        loginVC.modalPresentationStyle = .fullScreen
+        present(loginVC, animated: true)
+    }
 }
 
 
-extension ViewController {
+extension MainVC {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         modelData.value.count
     }
