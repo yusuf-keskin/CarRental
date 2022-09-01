@@ -48,8 +48,10 @@ class DataParser {
                 }
             }
         }
-       
         return completedArray
     }
 
 }
+ 
+
+

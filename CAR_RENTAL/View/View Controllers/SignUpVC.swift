@@ -7,7 +7,10 @@
 
 import UIKit
 
-class SignUpVC: UIViewController {
+class SignUpVC: UIViewController, Coordinating {
+    
+    var coordinator: Coordinator?
+    
     static let identifier = "signUpVC"
     
     let signUpView : UIView = {
@@ -113,9 +116,7 @@ class SignUpVC: UIViewController {
 
     
     @objc func goToLoginVC() {
-        let loginVC = LoginVC()
-        loginVC.modalPresentationStyle = .fullScreen
-        present(loginVC, animated: true)
+        coordinator?.navOccured(with: .loginVC)
     }
 
 }

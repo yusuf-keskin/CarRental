@@ -23,6 +23,10 @@
 		326E8FEC289C68F100C9C2F5 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E8FEB289C68F100C9C2F5 /* UIImageViewExtension.swift */; };
 		3281C6A128A9605E009EB473 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281C6A028A9605E009EB473 /* LoginVC.swift */; };
 		3281C6A328A9608A009EB473 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281C6A228A9608A009EB473 /* SignUpVC.swift */; };
+		32B00A9728BFF17B0012526D /* NotifDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B00A9628BFF17B0012526D /* NotifDataVC.swift */; };
+		32B00A9928BFF58B0012526D /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B00A9828BFF58B0012526D /* DataCell.swift */; };
+		32B00A9E28BFF97D0012526D /* Coordinator Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B00A9D28BFF97D0012526D /* Coordinator Protocol.swift */; };
+		32B00AA128BFF9920012526D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B00AA028BFF9920012526D /* MainCoordinator.swift */; };
 		4DAEF3360CFEA51AB0989DDE /* Pods_CAR_RENTAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B78A9786E2070E609BB6DDF4 /* Pods_CAR_RENTAL.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +50,11 @@
 		326E8FEB289C68F100C9C2F5 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		3281C6A028A9605E009EB473 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3281C6A228A9608A009EB473 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		32B00A9528BFD73D0012526D /* CAR_RENTAL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CAR_RENTAL.entitlements; sourceTree = "<group>"; };
+		32B00A9628BFF17B0012526D /* NotifDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifDataVC.swift; sourceTree = "<group>"; };
+		32B00A9828BFF58B0012526D /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
+		32B00A9D28BFF97D0012526D /* Coordinator Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator Protocol.swift"; sourceTree = "<group>"; };
+		32B00AA028BFF9920012526D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		B78A9786E2070E609BB6DDF4 /* Pods_CAR_RENTAL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CAR_RENTAL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A27D5990ACA7272AA7A670 /* Pods-CAR_RENTAL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CAR_RENTAL.debug.xcconfig"; path = "Target Support Files/Pods-CAR_RENTAL/Pods-CAR_RENTAL.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +135,8 @@
 		325A18352896786200A80F03 /* CAR_RENTAL */ = {
 			isa = PBXGroup;
 			children = (
+				32B00A9528BFD73D0012526D /* CAR_RENTAL.entitlements */,
+				32B00A9C28BFF9530012526D /* Coordinator */,
 				321E55DB2899B57E00A489CD /* Service */,
 				3247F48D28A7CD9000F3B03A /* Helpers */,
 				321E55CE2899915800A489CD /* Utilities */,
@@ -144,12 +155,39 @@
 		325A184A2896871500A80F03 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				32B00A9A28BFF8EA0012526D /* Custom View */,
+				32B00A9B28BFF90C0012526D /* View Controllers */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		32B00A9A28BFF8EA0012526D /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
 				321E55D1289994A700A489CD /* CarCell.swift */,
+				32B00A9828BFF58B0012526D /* DataCell.swift */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		32B00A9B28BFF90C0012526D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				325A183A2896786200A80F03 /* MainVC.swift */,
 				3281C6A028A9605E009EB473 /* LoginVC.swift */,
 				3281C6A228A9608A009EB473 /* SignUpVC.swift */,
+				32B00A9628BFF17B0012526D /* NotifDataVC.swift */,
 			);
-			path = View;
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		32B00A9C28BFF9530012526D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				32B00A9D28BFF97D0012526D /* Coordinator Protocol.swift */,
+				32B00AA028BFF9920012526D /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		7E7A7A6D0EF47C85DCDEA471 /* Pods */ = {
@@ -286,12 +324,16 @@
 				3247F49128A7CD9000F3B03A /* UrlRequestMaker.swift in Sources */,
 				321E55DA2899B3DA00A489CD /* DataModel.swift in Sources */,
 				3281C6A128A9605E009EB473 /* LoginVC.swift in Sources */,
+				32B00A9928BFF58B0012526D /* DataCell.swift in Sources */,
 				321E55D2289994A700A489CD /* CarCell.swift in Sources */,
+				32B00A9E28BFF97D0012526D /* Coordinator Protocol.swift in Sources */,
 				3247F49028A7CD9000F3B03A /* DataParser.swift in Sources */,
+				32B00AA128BFF9920012526D /* MainCoordinator.swift in Sources */,
 				325A183B2896786200A80F03 /* MainVC.swift in Sources */,
 				3222F22B28AABC710094DF1B /* FirebaseAuthService.swift in Sources */,
 				325A18372896786200A80F03 /* AppDelegate.swift in Sources */,
 				321E55D42899985D00A489CD /* Observable.swift in Sources */,
+				32B00A9728BFF17B0012526D /* NotifDataVC.swift in Sources */,
 				326E8FEC289C68F100C9C2F5 /* UIImageViewExtension.swift in Sources */,
 				321E55D72899B0E800A489CD /* RentalViewModel.swift in Sources */,
 				3281C6A328A9608A009EB473 /* SignUpVC.swift in Sources */,
@@ -434,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CAR_RENTAL/CAR_RENTAL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DK47ZGQX9C;
@@ -462,6 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CAR_RENTAL/CAR_RENTAL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DK47ZGQX9C;

@@ -7,8 +7,10 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, Coordinating {
     
+    var coordinator: Coordinator?
+      
 
     static let identifier = "loginVC"
     
@@ -74,8 +76,8 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         signUpView.isUserInteractionEnabled = true
         view.isUserInteractionEnabled = true
+        navigationController?.navigationBar.isHidden = true
 
-       
     }
     
     override func viewDidLayoutSubviews() {
@@ -103,15 +105,11 @@ class LoginVC: UIViewController {
     }
     
     @objc func goToSignUpVC(){
-        let signUpVC = SignUpVC()
-        signUpVC.modalPresentationStyle = .fullScreen
-        present(signUpVC, animated: true)
+        coordinator?.navOccured(with: .signUpVC)
     }
     
     func goToMainVC  () {
-        let mainVC = UINavigationController(rootViewController: MainVC())
-        mainVC.modalPresentationStyle = .fullScreen
-        present(mainVC, animated: true)
+        coordinator?.navOccured(with: .mainVC)
     }
 
 

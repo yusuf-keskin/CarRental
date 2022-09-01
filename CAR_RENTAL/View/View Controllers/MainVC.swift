@@ -7,7 +7,10 @@
 
 import UIKit
 
-class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate, UISearchResultsUpdating {
+class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate, UISearchResultsUpdating, Coordinating {
+    
+    var coordinator: Coordinator?
+    
     
     static let identifier = "mainVC"
     var rentalModel = RentalViewModel()
@@ -30,6 +33,10 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.isHidden = false
+        navigationItem.hidesBackButton = true
+        
         modelData.bind { [self] _ in
             DispatchQueue.main.async { [self] in
                 tableView.reloadData()
@@ -90,9 +97,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     }
     
     func goToLogin() {
-        let loginVC = LoginVC()
-        loginVC.modalPresentationStyle = .fullScreen
-        present(loginVC, animated: true)
+        coordinator?.navOccured(with: .loginVC)
     }
 }
 

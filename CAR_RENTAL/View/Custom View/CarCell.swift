@@ -34,6 +34,13 @@ class CarCell: UITableViewCell {
         contentView.addSubview(carNameLbl)
       
      }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        carImage.image = nil
+        carNameLbl.text.removeAll()
+        
+    }
 
      required init?(coder aDecoder: NSCoder) {
        super.init(coder: aDecoder)

@@ -26,7 +26,7 @@ class DataService {
         
         session.dataTask(with: url) { [self] data, response, error in
             if error != nil {
-                print("Error getting data")
+                print("Error getting data", error as Any)
             } else {
                 do {
                     guard let dictArray = try JSONSerialization.jsonObject(with: data!) as? Dictionary<String,Any> else {print("Naaah"); return}
