@@ -11,7 +11,7 @@ import FirebaseCore
 import UserNotifications
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
     var window: UIWindow?
     
@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
-        
+        UNUserNotificationCenter.current().delegate = self
         //Coordinator Integration --------------------------------- START
 
         let navVC = UINavigationController()
@@ -51,8 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           let notification = notificationOption as? [String: AnyObject],
           let aps = notification["aps"] as? [String: AnyObject] {
           // 2
-          //NewsItem.makeNewsItem(aps)
-          
+            NotifData.makeNotifItem(aps)
+            print("nAsılsıun")
           // 3
           //(window?.rootViewController as? UITabBarController)?.selectedIndex = 1
         }
@@ -62,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     //Push Notificaions 2:
-    func registerForPushNotifications() {
+    func registerForPushNotifications() { 
       //1
       UNUserNotificationCenter.current()
         //2
@@ -99,9 +99,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         completionHandler(.failed)
         return
       }
+        NotifData.makeNotifItem(aps)
+        print("Merhabaaaaaaaaaaaaa")
 
+        completionHandler(.newData)
     }
+ 
     
-    
+
 }
 

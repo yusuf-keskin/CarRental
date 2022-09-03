@@ -9,6 +9,8 @@ import UIKit
 
 class NotifDataVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Coordinating {
     
+    static let refreshTableViewNotification  = Notification.Name("RefreshTableViewNotification")
+    
     var coordinator: Coordinator?
     
     let tableView : UITableView = {
@@ -22,8 +24,7 @@ class NotifDataVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-
-
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshTableView), name: NotifDataVC.refreshTableViewNotification, object: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -32,13 +33,20 @@ class NotifDataVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     }
 
     
+    @objc func refreshTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        25
+        FileSystemStorage.shared.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DataCell.identifier) as? DataCell
-        cell?.configureCell(nameLbl: "Merhaba", descLbl: "Naber nasılsın")
+        let indexPath = FileSystemStorage.shared.items[indexPath.row]
+        cell?.configureCell(nameLbl: indexPath.name, descLbl: indexPath.description)
         return cell!
     }
 

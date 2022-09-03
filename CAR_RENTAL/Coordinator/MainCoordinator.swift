@@ -41,7 +41,7 @@ class MainCoordinator : Coordinator {
     }
     
     func start() {
-        var vc : UIViewController & Coordinating = LoginVC()
+        var vc : UIViewController & Coordinating = NotifDataVC()
         vc.coordinator = self
         navigationController?.navigationBar.backgroundColor = UIColor.white
         navigationController?.setViewControllers([vc], animated: false)

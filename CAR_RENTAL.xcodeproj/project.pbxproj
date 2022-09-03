@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3215A80F28C050C300D162BE /* NotifDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215A80E28C050C300D162BE /* NotifDataModel.swift */; };
+		3215A81228C0536300D162BE /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215A81128C0536300D162BE /* StorageProtocol.swift */; };
+		3215A81428C053EA00D162BE /* FileSytemStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215A81328C053EA00D162BE /* FileSytemStorage.swift */; };
 		321E55D02899916C00A489CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55CF2899916C00A489CD /* Constants.swift */; };
 		321E55D2289994A700A489CD /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55D1289994A700A489CD /* CarCell.swift */; };
 		321E55D42899985D00A489CD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55D32899985D00A489CD /* Observable.swift */; };
@@ -32,6 +35,9 @@
 
 /* Begin PBXFileReference section */
 		239E0265D1B5AB0F6A20E3DB /* Pods-CAR_RENTAL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CAR_RENTAL.release.xcconfig"; path = "Target Support Files/Pods-CAR_RENTAL/Pods-CAR_RENTAL.release.xcconfig"; sourceTree = "<group>"; };
+		3215A80E28C050C300D162BE /* NotifDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifDataModel.swift; sourceTree = "<group>"; };
+		3215A81128C0536300D162BE /* StorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
+		3215A81328C053EA00D162BE /* FileSytemStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSytemStorage.swift; sourceTree = "<group>"; };
 		321E55CF2899916C00A489CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		321E55D1289994A700A489CD /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		321E55D32899985D00A489CD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -71,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3215A81028C0532400D162BE /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				3215A81128C0536300D162BE /* StorageProtocol.swift */,
+				3215A81328C053EA00D162BE /* FileSytemStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		321E55CE2899915800A489CD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				321E55D92899B3DA00A489CD /* DataModel.swift */,
+				3215A80E28C050C300D162BE /* NotifDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				32B00A9528BFD73D0012526D /* CAR_RENTAL.entitlements */,
+				3215A81028C0532400D162BE /* Storage */,
 				32B00A9C28BFF9530012526D /* Coordinator */,
 				321E55DB2899B57E00A489CD /* Service */,
 				3247F48D28A7CD9000F3B03A /* Helpers */,
@@ -321,21 +338,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3247F49128A7CD9000F3B03A /* UrlRequestMaker.swift in Sources */,
-				321E55DA2899B3DA00A489CD /* DataModel.swift in Sources */,
+				3215A80F28C050C300D162BE /* NotifDataModel.swift in Sources */,
+				32B00A9728BFF17B0012526D /* NotifDataVC.swift in Sources */,
 				3281C6A128A9605E009EB473 /* LoginVC.swift in Sources */,
+				3222F22B28AABC710094DF1B /* FirebaseAuthService.swift in Sources */,
 				32B00A9928BFF58B0012526D /* DataCell.swift in Sources */,
+				325A18372896786200A80F03 /* AppDelegate.swift in Sources */,
 				321E55D2289994A700A489CD /* CarCell.swift in Sources */,
+				326E8FEC289C68F100C9C2F5 /* UIImageViewExtension.swift in Sources */,
 				32B00A9E28BFF97D0012526D /* Coordinator Protocol.swift in Sources */,
+				321E55D72899B0E800A489CD /* RentalViewModel.swift in Sources */,
+				3215A81228C0536300D162BE /* StorageProtocol.swift in Sources */,
+				3215A81428C053EA00D162BE /* FileSytemStorage.swift in Sources */,
 				3247F49028A7CD9000F3B03A /* DataParser.swift in Sources */,
 				32B00AA128BFF9920012526D /* MainCoordinator.swift in Sources */,
 				325A183B2896786200A80F03 /* MainVC.swift in Sources */,
-				3222F22B28AABC710094DF1B /* FirebaseAuthService.swift in Sources */,
-				325A18372896786200A80F03 /* AppDelegate.swift in Sources */,
+				3247F49128A7CD9000F3B03A /* UrlRequestMaker.swift in Sources */,
+				321E55DA2899B3DA00A489CD /* DataModel.swift in Sources */,
 				321E55D42899985D00A489CD /* Observable.swift in Sources */,
-				32B00A9728BFF17B0012526D /* NotifDataVC.swift in Sources */,
-				326E8FEC289C68F100C9C2F5 /* UIImageViewExtension.swift in Sources */,
-				321E55D72899B0E800A489CD /* RentalViewModel.swift in Sources */,
 				3281C6A328A9608A009EB473 /* SignUpVC.swift in Sources */,
 				321E55D02899916C00A489CD /* Constants.swift in Sources */,
 				321E55DD2899B59300A489CD /* DataService.swift in Sources */,
