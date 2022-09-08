@@ -7,9 +7,9 @@
 
 import UIKit
 
-class SignUpVC: UIViewController, Coordinating {
+class SignUpVC: UIViewController {
     
-    var coordinator: Coordinator?
+    var coordinator: MainCoordinator?
     
     static let identifier = "signUpVC"
     
@@ -117,6 +117,10 @@ class SignUpVC: UIViewController, Coordinating {
     
     @objc func goToLoginVC() {
         coordinator?.navOccured(with: .loginVC)
+    }
+    
+    deinit {
+        print("SignupVC deinited")
     }
 
 }

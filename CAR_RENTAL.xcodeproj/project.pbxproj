@@ -10,6 +10,8 @@
 		3215A80F28C050C300D162BE /* NotifDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215A80E28C050C300D162BE /* NotifDataModel.swift */; };
 		3215A81228C0536300D162BE /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215A81128C0536300D162BE /* StorageProtocol.swift */; };
 		3215A81428C053EA00D162BE /* FileSytemStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215A81328C053EA00D162BE /* FileSytemStorage.swift */; };
+		3218297028C912B300FA1B29 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3218296F28C912B300FA1B29 /* SignUpCoordinator.swift */; };
+		3218297228C9344200FA1B29 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3218297128C9344200FA1B29 /* UIImageExt.swift */; };
 		321E55D02899916C00A489CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55CF2899916C00A489CD /* Constants.swift */; };
 		321E55D2289994A700A489CD /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55D1289994A700A489CD /* CarCell.swift */; };
 		321E55D42899985D00A489CD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55D32899985D00A489CD /* Observable.swift */; };
@@ -23,9 +25,11 @@
 		325A183B2896786200A80F03 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A183A2896786200A80F03 /* MainVC.swift */; };
 		325A18402896786400A80F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325A183F2896786400A80F03 /* Assets.xcassets */; };
 		325A18432896786400A80F03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325A18412896786400A80F03 /* LaunchScreen.storyboard */; };
+		3267633428C4ACF8009168EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3267633328C4ACF8009168EE /* GoogleService-Info.plist */; };
 		326E8FEC289C68F100C9C2F5 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E8FEB289C68F100C9C2F5 /* UIImageViewExtension.swift */; };
 		3281C6A128A9605E009EB473 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281C6A028A9605E009EB473 /* LoginVC.swift */; };
 		3281C6A328A9608A009EB473 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281C6A228A9608A009EB473 /* SignUpVC.swift */; };
+		3295B9D928C7EC36000E3D66 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3295B9D828C7EC35000E3D66 /* LoginCoordinator.swift */; };
 		32B00A9728BFF17B0012526D /* NotifDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B00A9628BFF17B0012526D /* NotifDataVC.swift */; };
 		32B00A9928BFF58B0012526D /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B00A9828BFF58B0012526D /* DataCell.swift */; };
 		32B00A9E28BFF97D0012526D /* Coordinator Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B00A9D28BFF97D0012526D /* Coordinator Protocol.swift */; };
@@ -38,6 +42,8 @@
 		3215A80E28C050C300D162BE /* NotifDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifDataModel.swift; sourceTree = "<group>"; };
 		3215A81128C0536300D162BE /* StorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
 		3215A81328C053EA00D162BE /* FileSytemStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSytemStorage.swift; sourceTree = "<group>"; };
+		3218296F28C912B300FA1B29 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		3218297128C9344200FA1B29 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		321E55CF2899916C00A489CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		321E55D1289994A700A489CD /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		321E55D32899985D00A489CD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -53,9 +59,11 @@
 		325A183F2896786400A80F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		325A18422896786400A80F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		325A18442896786400A80F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3267633328C4ACF8009168EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		326E8FEB289C68F100C9C2F5 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		3281C6A028A9605E009EB473 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3281C6A228A9608A009EB473 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		3295B9D828C7EC35000E3D66 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		32B00A9528BFD73D0012526D /* CAR_RENTAL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CAR_RENTAL.entitlements; sourceTree = "<group>"; };
 		32B00A9628BFF17B0012526D /* NotifDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifDataVC.swift; sourceTree = "<group>"; };
 		32B00A9828BFF58B0012526D /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
@@ -91,6 +99,7 @@
 			children = (
 				321E55CF2899916C00A489CD /* Constants.swift */,
 				326E8FEB289C68F100C9C2F5 /* UIImageViewExtension.swift */,
+				3218297128C9344200FA1B29 /* UIImageExt.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -112,13 +121,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		321E55DB2899B57E00A489CD /* Service */ = {
+		321E55DB2899B57E00A489CD /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				321E55DC2899B59300A489CD /* DataService.swift */,
 				3222F22A28AABC710094DF1B /* FirebaseAuthService.swift */,
 			);
-			path = Service;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		3247F48D28A7CD9000F3B03A /* Helpers */ = {
@@ -154,7 +163,7 @@
 				32B00A9528BFD73D0012526D /* CAR_RENTAL.entitlements */,
 				3215A81028C0532400D162BE /* Storage */,
 				32B00A9C28BFF9530012526D /* Coordinator */,
-				321E55DB2899B57E00A489CD /* Service */,
+				321E55DB2899B57E00A489CD /* Services */,
 				3247F48D28A7CD9000F3B03A /* Helpers */,
 				321E55CE2899915800A489CD /* Utilities */,
 				321E55D82899B3B500A489CD /* Model */,
@@ -164,6 +173,7 @@
 				325A183F2896786400A80F03 /* Assets.xcassets */,
 				325A18412896786400A80F03 /* LaunchScreen.storyboard */,
 				325A18442896786400A80F03 /* Info.plist */,
+				3267633328C4ACF8009168EE /* GoogleService-Info.plist */,
 				321E55D32899985D00A489CD /* Observable.swift */,
 			);
 			path = CAR_RENTAL;
@@ -176,6 +186,15 @@
 				32B00A9B28BFF90C0012526D /* View Controllers */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		328220AD28C33CB6000B7919 /* ChildCoordinators */ = {
+			isa = PBXGroup;
+			children = (
+				3218296F28C912B300FA1B29 /* SignUpCoordinator.swift */,
+				3295B9D828C7EC35000E3D66 /* LoginCoordinator.swift */,
+			);
+			path = ChildCoordinators;
 			sourceTree = "<group>";
 		};
 		32B00A9A28BFF8EA0012526D /* Custom View */ = {
@@ -203,6 +222,7 @@
 			children = (
 				32B00A9D28BFF97D0012526D /* Coordinator Protocol.swift */,
 				32B00AA028BFF9920012526D /* MainCoordinator.swift */,
+				328220AD28C33CB6000B7919 /* ChildCoordinators */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -286,6 +306,7 @@
 			files = (
 				325A18432896786400A80F03 /* LaunchScreen.storyboard in Resources */,
 				325A18402896786400A80F03 /* Assets.xcassets in Resources */,
+				3267633428C4ACF8009168EE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,9 +360,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3215A80F28C050C300D162BE /* NotifDataModel.swift in Sources */,
+				3218297028C912B300FA1B29 /* SignUpCoordinator.swift in Sources */,
 				32B00A9728BFF17B0012526D /* NotifDataVC.swift in Sources */,
 				3281C6A128A9605E009EB473 /* LoginVC.swift in Sources */,
 				3222F22B28AABC710094DF1B /* FirebaseAuthService.swift in Sources */,
+				3218297228C9344200FA1B29 /* UIImageExt.swift in Sources */,
+				3295B9D928C7EC36000E3D66 /* LoginCoordinator.swift in Sources */,
 				32B00A9928BFF58B0012526D /* DataCell.swift in Sources */,
 				325A18372896786200A80F03 /* AppDelegate.swift in Sources */,
 				321E55D2289994A700A489CD /* CarCell.swift in Sources */,
@@ -426,7 +450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -480,7 +504,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

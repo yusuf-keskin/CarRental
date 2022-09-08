@@ -10,6 +10,8 @@ import UIKit
 class CarCell: UITableViewCell {
     static let identifier = "carCell"
     
+    var dataTask : URLSessionDataTask?
+    
     let carImage:UIImageView = {
         let img = UIImageView()
         img.contentMode = .scaleAspectFill
@@ -29,7 +31,6 @@ class CarCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         contentView.addSubview(carImage)
         contentView.addSubview(carNameLbl)
       
@@ -37,8 +38,12 @@ class CarCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        
+        DataService.instance.dataTask?.cancel()
+        DataService.instance.dataTask = nil
         carImage.image = nil
         carNameLbl.text.removeAll()
+        
         
     }
 
@@ -53,7 +58,7 @@ class CarCell: UITableViewCell {
         carImage.frame = CGRect(x: 10,
                                 y: 5,
                                 width: 140,
-                                height: 90)
+                                height: 140)
         
         carNameLbl.frame = CGRect(x: 170,
                                   y: 10,

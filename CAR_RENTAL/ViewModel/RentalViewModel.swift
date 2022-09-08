@@ -8,7 +8,7 @@
 import Foundation
 
 class RentalViewModel {
-
+    
     var searchWord = Observable<String>("trailer")
 
     func updateSearch (completion : @escaping(_ model : [CarModel])->()){

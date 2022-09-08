@@ -9,22 +9,34 @@ import UIKit
 import FirebaseCore
 //Push Notifications :
 import UserNotifications
+import FirebaseMessaging
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
     
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
         FirebaseApp.configure()
         
+        Messaging.messaging().delegate = self
+        application.registerForRemoteNotifications()
+        
+        // Local and Firebase Messagin, both need this:
         UNUserNotificationCenter.current().delegate = self
+        
+        
         //Coordinator Integration --------------------------------- START
-
+        
         let navVC = UINavigationController()
-        let coordinator = MainCoordinator()
-        coordinator.navigationController = navVC
+        let coordinator = MainCoordinator(navigationController: navVC)
+        coordinator.start()
+        
+        if AuthService.insance.loggedIn == true {
+            coordinator.navOccured(with: .mainVC)
+        }
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = navVC
@@ -32,55 +44,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         window.makeKeyAndVisible()
         self.window = window
         
-        coordinator.start()
+
         
         //Coordinator Integration --------------------------------- END
         
         
         
         //Push Notificaions 3 :
-        
         registerForPushNotifications()
         
         
         // Check if launched from notification
-        let notificationOption = launchOptions?[.remoteNotification]
-
-        // 1
-        if
-          let notification = notificationOption as? [String: AnyObject],
-          let aps = notification["aps"] as? [String: AnyObject] {
-          // 2
-            NotifData.makeNotifItem(aps)
-            print("nAsılsıun")
-          // 3
-          //(window?.rootViewController as? UITabBarController)?.selectedIndex = 1
+        if let notificationOption = launchOptions?[.remoteNotification] {
+            if let notification = notificationOption as? [String: AnyObject],
+               let aps = notification["aps"] as? [String: AnyObject] {
+                coordinator.navOccured(with: .notifVC)
+                print("aps")
+            }
+            
         }
         
+
         
         return true
     }
     
-    //Push Notificaions 2:
-    func registerForPushNotifications() { 
-      //1
-      UNUserNotificationCenter.current()
-        //2
-        .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-          //3
-          print("Permission granted: \(granted)")
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        messaging.token { token, _ in
+            guard let token = token else {
+                return
+            }
+            print ("Firebase Messaging Token :  \(token)")
         }
+    }
+    
+    // Request for user Auth : (for both local and firebase)
+    func registerForPushNotifications() { UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+        
+        print("Permission granted: \(granted)")
+    }
     }
     
     
     ////Push Notificaions 3:
     func getNotificationSettings() { UNUserNotificationCenter.current().getNotificationSettings { settings in
-            print("Notification settings: \(settings)")
-            guard settings.authorizationStatus == .authorized else { return }
-            DispatchQueue.main.async {
-                UIApplication.shared.registerForRemoteNotifications()
-            }
+        print("Notification settings: \(settings)")
+        guard settings.authorizationStatus == .authorized else { return }
+        DispatchQueue.main.async {
+            UIApplication.shared.registerForRemoteNotifications()
         }
+    }
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data ) {
@@ -94,18 +107,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
-      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void ) {
-      guard let aps = userInfo["aps"] as? [String: AnyObject] else {
-        completionHandler(.failed)
-        return
-      }
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void ) {
+        guard let aps = userInfo["aps"] as? [String: AnyObject] else {
+            
+            completionHandler(.failed)
+            return
+        }
         NotifData.makeNotifItem(aps)
         print("Merhabaaaaaaaaaaaaa")
-
+        
+        // Print full message.
+        //print(userInfo)
+        
         completionHandler(.newData)
     }
- 
     
-
+    
+    
 }
 

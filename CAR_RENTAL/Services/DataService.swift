@@ -9,8 +9,11 @@ import Foundation
 
 class DataService {
     
+    
+    
     static let instance = DataService(urlRequestMaker: UrlRequestMaker.init(), dataParser: DataParser.init())
     
+    var dataTask : URLSessionDataTask?
     let urlRequestMaker : UrlRequestMaker
     let dataParser : DataParser
     
@@ -20,11 +23,14 @@ class DataService {
     }
     
     func getDataFromServer (searchWord : String, completion : @escaping (_ carModels : [CarModel] ) -> ()) {
-        
         let url = urlRequestMaker.makeURL()
-        let session = URLSession.shared
         
-        session.dataTask(with: url) { [self] data, response, error in
+        let session = URLSession.shared
+        session.configuration.urlCache?.memoryCapacity = 512 * 1024 * 1024
+        session.configuration.requestCachePolicy = .returnCacheDataElseLoad
+        print(session.configuration.urlCache?.memoryCapacity as Any)
+        
+        let dataTask = session.dataTask(with: url) { [self] data, response, error in
             if error != nil {
                 print("Error getting data", error as Any)
             } else {
@@ -34,7 +40,10 @@ class DataService {
                 } catch {
                 }
             }
-        }.resume()
+        }
+        
+        dataTask.resume()
+        self.dataTask = dataTask
     }
     
 }

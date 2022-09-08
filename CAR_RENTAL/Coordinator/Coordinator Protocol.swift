@@ -8,24 +8,21 @@
 import Foundation
 import UIKit
 
-enum NavVC {
+enum Nav {
     case loginVC
     case signUpVC
     case mainVC
     case notifVC
-    
+   
 }
 
-protocol Coordinator {
-    var child : [Coordinator]? { get set }
+protocol Coordinator: AnyObject {
+    var childCoordinators : [Coordinator] { get set }
     
-    var navigationController : UINavigationController? { get set }
+    var navigationController : UINavigationController { get set }
     
-    func navOccured (with navVC : NavVC)
+    func navOccured (with navEnum : Nav)
     
     func start()
 }
 
-protocol Coordinating {
-    var coordinator : Coordinator? { get set }
-}

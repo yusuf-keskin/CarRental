@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate, UISearchResultsUpdating, Coordinating {
+class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate, UISearchResultsUpdating {
     
     var coordinator: Coordinator?
     
@@ -27,6 +27,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         let table = UITableView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 100))
         table.directionalLayoutMargins = .init(top: 0, leading: 12, bottom: 0, trailing: 12)
         table.register(CarCell.self, forCellReuseIdentifier: CarCell.identifier)
+        table.backgroundColor = .white
         return table
     }()
     
@@ -70,7 +71,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         self.navigationItem.setRightBarButton(LogOutBtn, animated: true)
          
         view.addSubview(tableView)
-        tableView.rowHeight = 100
+        tableView.rowHeight = 160
         tableView.translatesAutoresizingMaskIntoConstraints = false
     }
    
@@ -96,6 +97,11 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         }
     }
     
+    @objc func goToNotifVC(sender: UIBarButtonItem) {
+        coordinator?.navOccured(with: .notifVC)
+    }
+    
+    
     func goToLogin() {
         coordinator?.navOccured(with: .loginVC)
     }
@@ -111,6 +117,7 @@ extension MainVC {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CarCell.identifier, for: indexPath) as? CarCell else {return UITableViewCell() }
         if modelData.value.count != 0 {
             let index = modelData.value[indexPath.row]
+            cell.backgroundColor = .white
             cell.carNameLbl.text = index.name
             cell.carImage.setCustomImage(index.imageUrl)
         }

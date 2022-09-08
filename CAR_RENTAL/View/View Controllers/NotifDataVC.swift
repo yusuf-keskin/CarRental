@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NotifDataVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Coordinating {
+class NotifDataVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     static let refreshTableViewNotification  = Notification.Name("RefreshTableViewNotification")
     
@@ -17,6 +17,7 @@ class NotifDataVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         let tablee = UITableView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height : UIScreen.main.bounds.height))
         tablee.rowHeight = 60
         tablee.register(DataCell.self, forCellReuseIdentifier: DataCell.identifier)
+        tablee.backgroundColor = .white
         return tablee
     }()
 
@@ -46,7 +47,8 @@ class NotifDataVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DataCell.identifier) as? DataCell
         let indexPath = FileSystemStorage.shared.items[indexPath.row]
-        cell?.configureCell(nameLbl: indexPath.name, descLbl: indexPath.description)
+        cell?.configureCell(nameLbl: indexPath.title, descLbl: indexPath.body)
+        cell?.backgroundColor = .white
         return cell!
     }
 

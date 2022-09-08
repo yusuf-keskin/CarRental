@@ -7,15 +7,14 @@
 
 import UIKit
 
-class LoginVC: UIViewController, Coordinating {
+class LoginVC: UIViewController {
     
-    var coordinator: Coordinator?
-      
+    var coordinator: MainCoordinator?
 
     static let identifier = "loginVC"
     
     let signUpView : UIView = {
-        let view = UIView(frame: CGRect(x: 20, y: (UIScreen.main.bounds.height - 250) / 2, width: UIScreen.main.bounds.width - 40, height: 300))
+        let view = UIView(frame: CGRect(x: 20, y: (UIScreen.main.bounds.height - 300) / 2, width: UIScreen.main.bounds.width - 40, height: 300))
         view.backgroundColor = .lightGray
         view.layer.cornerRadius = 10
         return view
@@ -96,7 +95,7 @@ class LoginVC: UIViewController, Coordinating {
     
     @objc func login() {
         AuthService.insance.loginUser(withEmail: emailTextField.text!, andPassword: passwordTextField.text!) { [self] success, error in
-            if let error = error {
+            if error != nil {
                 print("Login Error")
             } else {
                 goToMainVC()
@@ -110,6 +109,10 @@ class LoginVC: UIViewController, Coordinating {
     
     func goToMainVC  () {
         coordinator?.navOccured(with: .mainVC)
+    }
+    
+    deinit {
+        print("LoginVC deinited")
     }
 
 

@@ -32,7 +32,7 @@ class FileSystemStorage : Storage {
         do{
             let data = try encoder.encode(items)
             try data.write(to: itemsCache)
-        }catch{
+        } catch {
             print("Error saving notif data items", error)
         }
     }
