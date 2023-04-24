@@ -12,7 +12,7 @@
 		321E55D42899985D00A489CD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55D32899985D00A489CD /* Observable.swift */; };
 		321E55D72899B0E800A489CD /* RentalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55D62899B0E800A489CD /* RentalViewModel.swift */; };
 		321E55DA2899B3DA00A489CD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55D92899B3DA00A489CD /* DataModel.swift */; };
-		321E55DD2899B59300A489CD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55DC2899B59300A489CD /* DataService.swift */; };
+		321E55DD2899B59300A489CD /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E55DC2899B59300A489CD /* ApiManager.swift */; };
 		3247F49028A7CD9000F3B03A /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3247F48E28A7CD9000F3B03A /* DataParser.swift */; };
 		3247F49128A7CD9000F3B03A /* UrlRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3247F48F28A7CD9000F3B03A /* UrlRequestMaker.swift */; };
 		325A18372896786200A80F03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A18362896786200A80F03 /* AppDelegate.swift */; };
@@ -28,7 +28,7 @@
 		321E55D32899985D00A489CD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		321E55D62899B0E800A489CD /* RentalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalViewModel.swift; sourceTree = "<group>"; };
 		321E55D92899B3DA00A489CD /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		321E55DC2899B59300A489CD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		321E55DC2899B59300A489CD /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		3247F48E28A7CD9000F3B03A /* DataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 		3247F48F28A7CD9000F3B03A /* UrlRequestMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRequestMaker.swift; sourceTree = "<group>"; };
 		325A18332896786200A80F03 /* CAR_RENTAL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAR_RENTAL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +79,7 @@
 		321E55DB2899B57E00A489CD /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				321E55DC2899B59300A489CD /* DataService.swift */,
+				321E55DC2899B59300A489CD /* ApiManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -216,7 +216,7 @@
 				326E8FEC289C68F100C9C2F5 /* UIImageViewExtension.swift in Sources */,
 				321E55D72899B0E800A489CD /* RentalViewModel.swift in Sources */,
 				321E55D02899916C00A489CD /* Constants.swift in Sources */,
-				321E55DD2899B59300A489CD /* DataService.swift in Sources */,
+				321E55DD2899B59300A489CD /* ApiManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

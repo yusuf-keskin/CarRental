@@ -7,13 +7,24 @@
 
 import Foundation
 
-class RentalViewModel {
+protocol RentalViewModelInterface {
+    func updateSearch (completion : @escaping(_ model : [CarModel])->())
+    var searchWord : Observable<String> { get set }
+}
+
+class RentalViewModel : RentalViewModelInterface {
     
-    var searchWord = Observable<String>("trailer")
+    var searchWord = Observable<String>("")
+    let apiManager : ApiManagerInterface
+    
+    init(apiManager: ApiManagerInterface) {
+        self.apiManager = apiManager
+    }
     
     func updateSearch (completion : @escaping(_ model : [CarModel])->()){
-        DataService.instance.getDataFromServer(searchWord: searchWord.value) { carModels in
+        apiManager.getDataFromServer(searchWord: searchWord.value) { carModels in
             completion(carModels)
         }
     }
 }
+

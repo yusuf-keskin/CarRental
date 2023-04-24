@@ -7,11 +7,17 @@
 
 import Foundation
 
-var searchWord = Observable<String>("trailer")
+protocol UrlRequestMakerInterface {
+    func makeURL (_ keywords: String) -> URL?
+}
 
-class UrlRequestMaker {
-    func makeURL () -> URL {
-        let url = URL(string: SEARCH_URL + searchWord.value + REST_OF_URL)!
+class UrlRequestMaker : UrlRequestMakerInterface {
+    
+    var keyword_URL : String = "https://search.outdoorsy.co/rentals?filter[keywords]="
+    var pageLimit_AndOffset : String = "&page[limit]=10&page[offset]=10"
+    
+    func makeURL (_ keywords: String) -> URL? {
+        let url = URL(string: keyword_URL + keywords + pageLimit_AndOffset)
         return url
     }
 }
